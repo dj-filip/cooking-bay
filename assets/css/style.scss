@@ -1,0 +1,209 @@
+@import '_colors';
+@import '_main';
+@import '_admin';
+
+html {
+  overflow: auto;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  background-color: $mainBrown;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav.left {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content:  flex-start;
+  width: 300px;
+  height: 100vh;
+  padding-left: 50px;
+  background-color: #222;
+  box-sizing: border-box;
+}
+    // div.logo-wrap {
+
+    // }
+    a.logo {
+      display: block;
+      font-family: 'Roboto';
+      font-weight: 700;
+      color: #EBBE54;
+      font-size: 26px;
+      padding-top: 40px;
+      padding-bottom: 0 !important;
+    }
+
+        .italhead {
+          font-style: italic;
+          font-weight: 300;
+          color: #F6F6F6;
+        }
+
+    ul {
+      margin-top: 40px;
+      list-style: none;
+    }
+
+        // li {
+
+        // }
+
+            a {
+              text-decoration: none;
+              font-family: 'Roboto';
+              font-size: 18px;
+              font-weight: 300;
+              color: #978562;
+              padding: 20px 0;
+              display: flex;
+            }
+
+            a.bold {
+              font-weight: 700;
+            }
+
+            a:hover {
+              color: #EBBE54;
+            }
+
+            h4 {
+              margin-bottom: 40px;
+              font-family: 'Roboto';
+              font-size: 18px;
+              font-weight: 500;
+              color: #8c5d07;
+            }
+
+div.main-wrap {
+  height: 100vh;
+  flex-basis: 100%;
+  box-sizing: border-box;
+}
+
+    nav.top {
+      display: flex;
+      justify-content: flex-end;
+      flex-shrink: 0;
+      padding: 10px 0;
+      box-sizing: border-box;
+      /* box-shadow: 0 5px 10px 0px rgba(0,0,0,0.75); */
+    }
+
+        div.wlcm {
+          padding: 5px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          font-family: 'Roboto';
+          font-size: 20px;
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        .neutral {
+          background-color: #d4c7be;
+          color: $whity;
+        }
+
+        .success {
+          background-color: #85c855;
+          color: $whity;
+        }
+
+        a#login {
+          margin: 5.5px 40px 5.5px 0;
+          padding: 0;
+          font-family: 'Roboto';
+          font-size: 16px;
+          font-weight: 700;
+          font-style: italic;
+          color: $mainYellow;
+          &:hover {
+            color: #fde986;
+          }
+        }
+
+        div.account {
+          display: flex;
+          align-items: center;
+          margin-right: 40px;
+        }
+
+            button {
+              color: $whity;
+              background: none;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              ion-icon {
+                color: #EBBE54;
+              }
+              &:hover ion-icon {
+                color: #e29f00;
+              }
+            }
+
+
+        nav.account-drop {
+          background-color: #fff;
+          border-radius: 10px;
+          position: absolute;
+          margin: 39px 30px 0 0;
+          z-index: 1000;
+          display: none;
+        }
+
+            nav.account-drop ul {
+              margin: 10px 0;
+            }
+
+                // nav.account-drop li {
+
+                // }
+
+                    nav.account-drop li a {
+                      display: flex;
+                      font-size: 14px;
+                      padding: 5px 10px 5px 20px;
+                    }
+
+        nav.account-drop::before {
+          content: "";
+          position: fixed;
+          border: 10px solid;
+          border-color: transparent transparent #fff transparent;
+          transform: translateX(-50%);
+          right: 20%;
+          top: 3%;
+        }
+
+        .active-accdrop {
+          display: block !important;
+        }
+
+
+
+nav.right {
+  flex-shrink: 1;
+  width: 500px;
+  height: 100vh;
+  margin-left: auto;
+}
+
+main::-webkit-scrollbar {
+  width: 20px;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #46362A;
+  border-radius: 10px;
+  border: 6px solid transparent;
+  background-clip: content-box ;
+}
