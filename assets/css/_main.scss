@@ -22,9 +22,14 @@ main.app {
       justify-content: center;
       align-items: flex-end;
       border-radius: 10px;
-      box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
       cursor: pointer;
       overflow: hidden;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+        transition: 0.3s ease-in-out;
+      }
       img {
         border-radius: 10px 10px 0 0;
         width: 100%;
@@ -40,7 +45,7 @@ main.app {
           grid-row: span 1;
         }
         .L {
-          grid-column: span 2;
+          grid-column: span 3;
         }
         .XL {
           grid-column: span 2;

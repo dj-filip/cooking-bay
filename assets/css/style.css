@@ -36,10 +36,19 @@ div.all {
       -ms-flex-align: end;
           align-items: flex-end;
   border-radius: 10px;
-  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
   overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+div.all:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 div.all img {
@@ -57,7 +66,7 @@ div.all img {
 }
 
 .L {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
 .XL {
@@ -705,7 +714,7 @@ nav.left {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 300px;
+  width: 250px;
   height: 100vh;
   padding-left: 50px;
   background-color: #222;
@@ -755,7 +764,7 @@ a:hover {
 }
 
 h4 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-family: 'Roboto';
   font-size: 18px;
   font-weight: 500;
@@ -782,7 +791,8 @@ nav.top {
   padding: 10px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /* box-shadow: 0 5px 10px 0px rgba(0,0,0,0.75); */
+  -webkit-box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
 div.wlcm {
@@ -850,11 +860,16 @@ button:hover ion-icon {
   color: #e29f00;
 }
 
+div.account-drop-wrap {
+  position: absolute;
+  margin: 39px 30px 0 0;
+}
+
 nav.account-drop {
   background-color: #fff;
   border-radius: 10px;
-  position: absolute;
-  margin: 39px 30px 0 0;
+  position: relative;
+  padding: 5px;
   z-index: 1000;
   display: none;
 }
@@ -873,13 +888,13 @@ nav.account-drop li a {
 
 nav.account-drop::before {
   content: "";
-  position: fixed;
+  position: absolute;
+  top: -20px;
+  right: 35px;
   border: 10px solid;
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent white transparent;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  right: 20%;
-  top: 3%;
 }
 
 .active-accdrop {

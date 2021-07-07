@@ -29,38 +29,44 @@
         <?php endforeach; ?>
       </ul>
     </nav>
+
     <div class="main-wrap">
+
       <nav class="top">
 
-        <?php include_once (ROOT_PATH . '/app/includes/messages.php'); ?>
+          <?php include_once (ROOT_PATH . '/app/includes/messages.php'); ?>
 
-        <?php if (isset($_SESSION['id'])): ?>
-          <div class="account">
-            <button><ion-icon name="person-outline"></ion-icon></button>
-            <span><?php echo $_SESSION['username']; ?></span>
-          </div>
-          <nav class="account-drop">
-            <ul>
-              <?php if($_SESSION['admin']): ?>
-                <li>
-                  <a class="bold" href="<?php echo BASE_URL . '/admin/posts/index.php' ?>">DASHBOARD</a>
-                </li>
-              <?php endif; ?>
-              <li>
-                <a href="#">Profile</a>
-              </li>
-              <li>
-                <a href="#">Appearance</a>
-              </li>
-              <li>
-                <a href="#">Help</a>
-              </li>
-              <li>
-              <a href="<?php echo BASE_URL . '/logout.php' ?>">Sign Out</a>
-              </li>
-            </ul>
-          </nav>
-        <?php else: ?>
-          <a id="login" href="<?php echo BASE_URL . '/login.php' ?>">Log In</a>
-        <?php endif; ?>
-      </nav>
+          <?php if (isset($_SESSION['id'])): ?>
+            <div class="account">
+              <button><ion-icon name="person-outline"></ion-icon></button>
+              <span><?php echo $_SESSION['username']; ?></span>
+            </div>
+            <div class="account-drop-wrap">
+              <nav class="account-drop">
+                <ul>
+                  <?php if($_SESSION['admin']): ?>
+                    <li>
+                      <a class="bold" href="<?php echo BASE_URL . '/admin/posts/index.php' ?>">DASHBOARD</a>
+                    </li>
+                  <?php endif; ?>
+                  <li>
+                    <a href="#">Profile</a>
+                  </li>
+                  <li>
+                    <a href="#">Appearance</a>
+                  </li>
+                  <li>
+                    <a href="#">Help</a>
+                  </li>
+                  <li>
+                  <a href="<?php echo BASE_URL . '/logout.php' ?>">Sign Out</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+          <?php else: ?>
+            <a id="login" href="<?php echo BASE_URL . '/login.php' ?>">Log In</a>
+          <?php endif; ?>
+        </nav>
+      
