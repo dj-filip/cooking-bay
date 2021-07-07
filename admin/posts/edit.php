@@ -55,6 +55,19 @@
                   </select>
               </div>
               <div class="input-wrap">
+                <label>Size</label>
+                <select name="size">
+                  <option value=""></option>
+                  <?php foreach ($posts as $key => $post): ?>
+                    <?php if (!empty($size) && $size == $post['size'] ): ?>
+                      <option selected value="<?php echo $post['size']; ?>"><?php echo $post['size']; ?></option>
+                    <?php else: ?>
+                      <option value="<?php echo $post['size']; ?>"><?php echo $post['size']; ?></option>
+                    <?php endif; ?>
+                  <?php endforeach; ?>
+                </select>
+            </div>
+              <div class="input-wrap">
                 <?php if (empty($published) && $published == 0): ?>
                   <input id="publish" type="checkbox" name="published"><label for="publish">Publish</label>
                 <?php else: ?>

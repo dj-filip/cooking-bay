@@ -4,7 +4,7 @@ include_once('path.php');
 include_once(ROOT_PATH . '/app/controllers/posts.php'); 
 
 $posts = selectAll('posts', ['published' => 1]);
-// dd($posts);
+// dd($topics);
 // exit();
 ?>
 
@@ -24,21 +24,40 @@ $posts = selectAll('posts', ['published' => 1]);
   </head>
 
 <?php include_once (ROOT_PATH . '/app/includes/header.php'); ?>
+  <div class="app-wrap">
+      <main class="app">
 
-  <main class="app">
+        <?php foreach ($posts as $post): ?>
+          <div class="all <?= $post['size'] ?>">
+          <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
+            <div class="marker">
+              <p><?= $post['title'] ?></p>
+              <?php foreach ($topics as $topic): ?>
+              <?php if ($post['topic_id'] == $topic['id']) { ?>
+              <span>#<?= $topic['name'] ?></span>
+              <?php } ?>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
 
-    <?php foreach ($posts as $post): ?>
-      <div class="all salmon m">
-      <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
-        <div class="marker">
-          <p><?= $post['title'] ?></p>
-          <span>#Recipes</span>
+        <div class="all menu S">
+          <h3>MY MENU</h3>
         </div>
-      </div>
-    <?php endforeach; ?>
+        <div class="all menu S">
+          <h3>MY MENU</h3>
+        </div>
+        <div class="all menu S">
+          <h3>MY MENU</h3>
+        </div>
 
-    <div class="all menu s">
-      <h3>MY MENU</h3>
+    <!-- 
+    <div class="all burgers m">
+      <img src="assets/images/burgers.png">  
+      <div class="marker">
+        <p>Burgers</p>
+        <span>#Recipe</span>
+      </div>
     </div>
     <div class="all market">
       <img src="assets/images/market.png">  
@@ -64,14 +83,9 @@ $posts = selectAll('posts', ['published' => 1]);
         <p>Street Food in Bangkok</p>
         <span>#Video</span>
       </div>
-    </div>
-    <div class="all burgers m">
-      <img src="assets/images/burgers.png">  
-      <div class="marker">
-        <p>Burgers</p>
-        <span>#Recipe</span>
-      </div>
-    </div>
-  </main>
+    </div> -->
+    </main>
+  </div>
+ 
 
 <?php include_once (ROOT_PATH . '/app/includes/footer.php');?>

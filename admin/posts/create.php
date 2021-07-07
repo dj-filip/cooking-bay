@@ -54,6 +54,16 @@
                 </select>
             </div>
             <div class="input-wrap">
+                <label>Size</label>
+                <select name="size">
+                  <option value=""></option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+            </div>
+            <div class="input-wrap">
               <?php if (empty($published)): ?>
                 <input id="publish" type="checkbox" name="published"><label for="publish">Publish</label>
               <?php else: ?>

@@ -192,16 +192,16 @@ div.main-wrap {
 
 nav.right {
   flex-shrink: 1;
-  width: 500px;
+  width: 470px;
   height: 100vh;
   margin-left: auto;
 }
 
-main::-webkit-scrollbar {
+div.app-wrap::-webkit-scrollbar {
   width: 20px;
 }
 
-main::-webkit-scrollbar-thumb {
+div.app-wrap::-webkit-scrollbar-thumb {
   background-color: #46362A;
   border-radius: 10px;
   border: 6px solid transparent;
