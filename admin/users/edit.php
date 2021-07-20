@@ -55,8 +55,6 @@
     </main>
 
   </div>
-  <nav class="right">
-  </nav>
   <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
   <script src="../../assets/js/main.js" type="text/javascript"></script>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

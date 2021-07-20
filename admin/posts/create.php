@@ -72,15 +72,13 @@
             </div>
           </div>
           <div class="button-space">
-            <button class="admin-sub" type="submit" name="add-post">Add</button>
+            <button id="sbmt" class="admin-sub" type="submit" name="add-post">Add</button>
           </div>
         </form>
       </div>
     </main>
 
   </div>
-  <nav class="right">
-  </nav>
   <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
   <script src="../../assets/js/main.js" type="text/javascript"></script>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

@@ -1,25 +1,60 @@
-// CALLING FUNCTIONS
+// CALLING FUNCTIONS:
+  // CHECK IF ON SPECIFIC PAGE AND THEN CALL...
+  $(document).ready(function() {
+    if (window.location.href.indexOf('signup') > -1 || window.location.href.indexOf('login') 
+    > -1 || window.location.href.indexOf('edit') > -1 || window.location.href.indexOf('create') > -1) {
+      validate();
+      $('input, select').on('keyup change', validate);
+    }
+  });
 
-// ACCOUNT BUTTON DROPDOWN
-$(document).ready(function() {
-  $("div.account button").click(function() {
-    $(".account-drop").toggleClass("active-accdrop")
-  })
-});
 
-$(document).ready(function() {
-  if (window.location.href.indexOf('signup') > -1 || window.location.href.indexOf('login') 
-  > -1 || window.location.href.indexOf('edit') > -1 || window.location.href.indexOf('create') > -1) {
-    validate();
-    $('input, select').on('keyup change', validate);
-  }
-});
+  $(document).ready(function() {
+    if (window.location.href.indexOf('explore') > -1) {
+      gridMaker();
+    }
+  });
 
-$(document).ready(function() {
-  if (window.location.href.indexOf('explore') > -1) {
-    gridMaker();
-  }
-});
+
+  $(document).ready(function() {
+    if (window.location.href.indexOf('edit') > -1 || window.location.href.indexOf('create') > -1) {
+
+    // CK editor
+    ClassicEditor.create( document.querySelector( '#editor' ), {
+      toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+      heading: {
+          options: [
+              { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+              { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+              { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+          ]
+      }
+    })
+      .catch( error => {
+      console.log( error );
+      });
+    }
+  });
+
+
+  // CALLING ACCOUNT BUTTON DROPDOWN
+    $(document).ready(function() {
+      $("div.account button").click(function() {
+        $(".account-drop").toggleClass("active-accdrop")
+      })
+    });
+
+    // Account Drop Bar Close by Clicking Outside
+      $(document).click(function() {
+        $(".account-drop").removeClass("active-accdrop");
+      });
+
+      $(".account-drop, div.account button").click(function(e) {
+        e.stopPropagation();
+      });
+
+
+
 
 
 // ENABLE BUTTON IF ALL INPUTS ARE FILLED
@@ -39,9 +74,9 @@ function validate() {
   });
   // console.log(select, myInputsRaw.length, inputsWithValues);
   if (inputsWithValues == myInputsRaw.length) {
-    $('button').removeAttr('disabled');
+    $('#sbmt').removeAttr('disabled');
   } else {
-    $('button').attr('disabled', 'disabled');
+    $('#sbmt').attr('disabled', 'disabled');
   }
 };
 
@@ -208,19 +243,6 @@ function gridMaker() {
 // rowElementPosition = [1, 2-3, 4-5]
 // rowElementPositionNext = [?, 2-3(occupied with XL from previous), ?]
 
-// CK editor
-ClassicEditor.create( document.querySelector( '#editor' ), {
-  toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
-  heading: {
-      options: [
-          { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-          { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
-          { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
-      ]
-  }
-  } )
-  .catch( error => {
-  console.log( error );
-  } );
+
 
 
