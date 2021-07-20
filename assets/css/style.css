@@ -1,4 +1,13 @@
+div.middle-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
 div.app-wrap {
+  width: 100%;
   height: calc(100vh - 49px);
   overflow-y: scroll;
 }
@@ -368,8 +377,8 @@ button.sub:disabled {
 
 main.admin {
   height: calc(100vh - 49px);
+  width: 80%;
   padding: 50px;
-  overflow-y: scroll;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }

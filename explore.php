@@ -24,68 +24,70 @@ $posts = selectAll('posts', ['published' => 1]);
   </head>
 
 <?php include_once (ROOT_PATH . '/app/includes/header.php'); ?>
-  <div class="app-wrap">
-      <main class="app">
+  <div class="middle-wrap">
+    <div class="app-wrap">
+        <main class="app">
 
-        <?php foreach ($posts as $post): ?>
-          <div class="all <?= $post['size'] ?>">
-          <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
-            <div class="marker">
-              <p><?= $post['title'] ?></p>
-              <?php foreach ($topics as $topic): ?>
-              <?php if ($post['topic_id'] == $topic['id']) { ?>
-              <span>#<?= $topic['name'] ?></span>
-              <?php } ?>
-              <?php endforeach; ?>
+          <?php foreach ($posts as $post): ?>
+            <div class="all <?= $post['size'] ?>">
+            <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
+              <div class="marker">
+                <p><?= $post['title'] ?></p>
+                <?php foreach ($topics as $topic): ?>
+                <?php if ($post['topic_id'] == $topic['id']) { ?>
+                <span>#<?= $topic['name'] ?></span>
+                <?php } ?>
+                <?php endforeach; ?>
+              </div>
             </div>
+          <?php endforeach; ?>
+
+          <div class="all menu S">
+            <h3>MY MENU</h3>
           </div>
-        <?php endforeach; ?>
+          <div class="all menu S">
+            <h3>MY MENU</h3>
+          </div>
+          <div class="all menu S">
+            <h3>MY MENU</h3>
+          </div>
 
-        <div class="all menu S">
-          <h3>MY MENU</h3>
+      <!-- 
+      <div class="all burgers m">
+        <img src="assets/images/burgers.png">  
+        <div class="marker">
+          <p>Burgers</p>
+          <span>#Recipe</span>
         </div>
-        <div class="all menu S">
-          <h3>MY MENU</h3>
-        </div>
-        <div class="all menu S">
-          <h3>MY MENU</h3>
-        </div>
-
-    <!-- 
-    <div class="all burgers m">
-      <img src="assets/images/burgers.png">  
-      <div class="marker">
-        <p>Burgers</p>
-        <span>#Recipe</span>
       </div>
+      <div class="all market">
+        <img src="assets/images/market.png">  
+        <div class="highlight">
+          <div class="icons">
+            <ion-icon name="share-social-outline"></ion-icon>
+            <ion-icon name="bookmark-outline"></ion-icon>
+          </div>
+          <p class="description">When researching travel to Marrakech there’s no doubt you’ve seen pictures of the markets of Marrakech.  They are a cacophony of colors and stores overflowing with things like shoes, lanterns, and clothing. It’s easy to get lost and wander for hours! But, many people find it very nerve wracking to be in such an environment and don’t relish the thought of being lost. That’s totally understandable....</p>
+          <div class="info-wrap">
+            <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
+            <p class="info">5 min read</p>
+          </div>
+        </div>
+        <div class="marker">
+          <p>Markets in Morroco</p>
+          <span>#Article</span>
+        </div>
+      </div>
+      <div class="all street-food">
+        <img src="assets/images/street-food.png">  
+        <div class="marker">
+          <p>Street Food in Bangkok</p>
+          <span>#Video</span>
+        </div>
+      </div> -->
+      </main>
     </div>
-    <div class="all market">
-      <img src="assets/images/market.png">  
-      <div class="highlight">
-        <div class="icons">
-          <ion-icon name="share-social-outline"></ion-icon>
-          <ion-icon name="bookmark-outline"></ion-icon>
-        </div>
-        <p class="description">When researching travel to Marrakech there’s no doubt you’ve seen pictures of the markets of Marrakech.  They are a cacophony of colors and stores overflowing with things like shoes, lanterns, and clothing. It’s easy to get lost and wander for hours! But, many people find it very nerve wracking to be in such an environment and don’t relish the thought of being lost. That’s totally understandable....</p>
-        <div class="info-wrap">
-          <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
-          <p class="info">5 min read</p>
-        </div>
-      </div>
-      <div class="marker">
-        <p>Markets in Morroco</p>
-        <span>#Article</span>
-      </div>
-    </div>
-    <div class="all street-food">
-      <img src="assets/images/street-food.png">  
-      <div class="marker">
-        <p>Street Food in Bangkok</p>
-        <span>#Video</span>
-      </div>
-    </div> -->
-    </main>
-  </div>
+  
  
 
 <?php include_once (ROOT_PATH . '/app/includes/footer.php');?>

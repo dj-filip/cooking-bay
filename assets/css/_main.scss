@@ -1,4 +1,10 @@
+div.middle-wrap {
+  display: flex;
+  flex-basis: 100%;
+}
+
 div.app-wrap {
+  width: 100%;
   height: calc(100vh - 49px);
   overflow-y: scroll;
 }

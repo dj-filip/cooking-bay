@@ -1,5 +1,6 @@
 main.admin {
   height: calc(100vh - 49px);
+  width: 80%;
   // display: flex;
   // grid-template-columns: repeat(5, 220px);
   // grid-template-rows: repeat(4, 350px);
@@ -7,7 +8,6 @@ main.admin {
   // grid-row-gap: 40px;
   // flex-grow: 1;
   padding: 50px;
-  overflow-y: scroll;
   box-sizing: border-box;
   a.btn {
     background-color: $mainYellow;
