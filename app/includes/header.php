@@ -3,24 +3,27 @@
   <body>
     <nav class="left">
         <a class="logo" href="<?php echo BASE_URL . '/explore.php' ?>"><h1><span class="italhead">Cooking</span> BAY</h1></a>
-      <ul>
+      <ul class="nav-list">
         <li>
-          <a href="<?php echo BASE_URL . '/explore.php' ?>">Explore</a>
+          <a href="<?php echo BASE_URL . '/explore.php' ?>"><ion-icon name="compass-outline"></ion-icon>Explore</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . '/recipes.php' ?>">Recipes</a>
+          <a href="<?php echo BASE_URL . '/recipes.php' ?>"><ion-icon name="restaurant-outline"></ion-icon>Recipes</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . '/articles.php' ?>">Articles</a>
+          <a href="<?php echo BASE_URL . '/articles.php' ?>"><ion-icon name="newspaper-outline"></ion-icon>Articles</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . '/groceries.php' ?>">Groceries</a>
+          <a href="<?php echo BASE_URL . '/videos.php' ?>"><ion-icon name="film-outline"></ion-icon>Videos</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . '/shops.php' ?>">Shops</a>
+          <a href="<?php echo BASE_URL . '/groceries.php' ?>"><ion-icon name="scale-outline"></ion-icon>Groceries</a>
+        </li>
+        <li>
+          <a href="<?php echo BASE_URL . '/shops.php' ?>"><ion-icon name="storefront-outline"></ion-icon>Shops</a>
         </li>
       </ul>
-      <ul>
+      <ul class="topics-list">
         <h4>TOPICS</h4>
         <?php foreach ($topics as $key => $topic): ?>
           <li>

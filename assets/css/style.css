@@ -725,20 +725,23 @@ nav.left {
           justify-content: flex-start;
   width: 250px;
   height: 100vh;
-  padding-left: 50px;
   background-color: #222;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 a.logo {
   display: block;
+  margin: 0 auto;
   font-family: 'Roboto';
   font-weight: 700;
   color: #EBBE54;
   font-size: 26px;
   padding-top: 40px;
-  padding-bottom: 0 !important;
 }
 
 .italhead {
@@ -748,32 +751,94 @@ a.logo {
 }
 
 ul {
-  margin-top: 40px;
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Roboto';
   font-size: 18px;
   font-weight: 300;
   color: #978562;
   padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
-a.bold {
+ul a ion-icon {
+  margin-right: 40px;
+  font-size: 24px;
+}
+
+ul li:first-child a ion-icon {
+  margin-right: 36px;
+  margin-left: -4px;
+  font-size: 32px;
+}
+
+ul a.bold {
   font-weight: 700;
 }
 
-a:hover {
+ul a:hover, ul .current {
   color: #EBBE54;
 }
 
-h4 {
+ul h4 {
   margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  color: #8c5d07;
+}
+
+ul.nav-list {
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+ul.topics-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto;
+  padding: 80px 20px 0 20px;
+}
+
+ul.topics-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  text-transform: lowercase;
+  color: #978562;
+  padding: 10px 10px;
+}
+
+ul.topics-list a.bold {
+  font-weight: 700;
+}
+
+ul.topics-list a:hover {
+  color: #EBBE54;
+}
+
+ul.topics-list h4 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 10px;
   font-family: 'Roboto';
   font-size: 18px;
   font-weight: 500;

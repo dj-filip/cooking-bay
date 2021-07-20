@@ -1,24 +1,27 @@
 // CALLING FUNCTIONS:
   // CHECK IF ON SPECIFIC PAGE AND THEN CALL...
-  $(document).ready(function() {
+  document.addEventListener('DOMContentLoaded', function() {
     if (window.location.href.indexOf('signup') > -1 || window.location.href.indexOf('login') 
     > -1 || window.location.href.indexOf('edit') > -1 || window.location.href.indexOf('create') > -1) {
       validate();
-      $('input, select').on('keyup change', validate);
+      document.querySelectorAll('input, select').forEach(function(item) {
+        item.addEventListener('keyup', validate);
+        item.addEventListener('change', validate);
+      })
+      // JQUERY: $('input, select').on('keyup change', validate);
     }
   });
 
 
-  $(document).ready(function() {
+  document.addEventListener('DOMContentLoaded', function() {
     if (window.location.href.indexOf('explore') > -1) {
       gridMaker();
     }
   });
 
 
-  $(document).ready(function() {
+  document.addEventListener('DOMContentLoaded', function() {
     if (window.location.href.indexOf('edit') > -1 || window.location.href.indexOf('create') > -1) {
-
     // CK editor
     ClassicEditor.create( document.querySelector( '#editor' ), {
       toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
@@ -34,7 +37,7 @@
       console.log( error );
       });
     }
-  });
+  }, false);
 
 
   // CALLING ACCOUNT BUTTON DROPDOWN
@@ -78,6 +81,7 @@ function validate() {
   } else {
     $('#sbmt').attr('disabled', 'disabled');
   }
+  console.log('radi');
 };
 
 
@@ -175,74 +179,13 @@ function gridMaker() {
 }
 
 
-// var m = document.getElementsByClassName('m')[0];
-// var s = document.getElementsByClassName('s')[0];
-// var gridRowN = 5;
-// var sW = 220;
-// var mW = 480;  2s + 40;
-// var lW = 740;  3s + 80;
-// gridRow = 1180;
-// if (gridRow - rowElements >= 220 ) {}
+// STYLE NAV MENU BASED ON PAGE
+let currentUrl = document.location;
 
-// console.log(m,s);
-// gridRowN = sum(gridRowChildren); 
-// gridRowChildren.foreach(function(gridRowChild) {
-//   if(gridRowChild elementbyClassName == 's') {
-//     s = gridRowChild;
-//   } elseif (gridRowChild elementbyClassName == 'm') {
-//     m = gridRowChild;
-//   } elseif (gridRowChild elementbyClassName == 'l') {
-//     l = gridRowChild;
-//   }
-// });
-
-// gridRowRawN - gridRowN
-// gridRowElementsSpace = 5 - gridRowElements(s, m, l, s);
-
-
-// 1G = 40
-// 1260 with gaps...
-// 5 s = 1100 + 4G
-// 4 s = 880 + 4G
-// 3 s = 660 + 3G
-
-// 1lRaw = 740
-// 1mRaw = 480
-// without gaps inside them:
-// m = mRaw - G
-// l = lRaw - 2G
-
-// full rows:
-// 1m + 2s = 920 + 3G
-// 1l + 1s = 960 + 2G
-// THEN ROW IS 1100
-// 1l + 1m = 1220 + 1G
-// 2m + 1s = 1180
-// 1l + 2s = 1180
-
-// so i have 3s = 660
-// 1260 - 660 - 80
-
-// Row = elements
-// if elements = 1260 ...gap = elements - 1
-
-// s = 1
-// m = 2
-// l = 3
-// xl = 2 (width) + 2(if previous row has xl)
-// rowSpace = 5
-// 5s = true
-// 1m, 3s =
-
-// if size = xl;
-// wdth = 2
-// rowSpace += 2 but also +2 for next row!? same position, next row - 2 spaces and also occupied space on that position as in previous row for xl
-// if previous rowSizes contains XL, then add 2 space for next row and also occupied space on that position
-// rowSizes = [s, xl, m]
-
-// rowElementPosition = [1, 2-3, 4-5]
-// rowElementPositionNext = [?, 2-3(occupied with XL from previous), ?]
-
-
-
-
+let navItems = document.querySelectorAll('.nav-list a');
+navItems.forEach(function(navItem) {
+  if(navItem.href == currentUrl) {
+    navItem.classList += ' current';
+  }
+});
+console.log(navItems);
