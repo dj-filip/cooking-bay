@@ -28,7 +28,7 @@
           <input type="text" name="email" value="<?php echo $email; ?>" placeholder="Email..." onfocus="this.placeholder=''" onblur="this.placeholder='Email...'" autocomplete="off">
           <input type="password" name="password" placeholder="Password..." onfocus="this.placeholder=''" onblur="this.placeholder='Password...'">
           <input type="password" name="pwdrepeat" placeholder="Repeat password..." onfocus="this.placeholder=''" onblur="this.placeholder='Repeat password...'">
-          <button class="sub" type="submit" name="signup-btn" disabled>Sign up</button>
+          <button id="sbmt" class="sub" type="submit" name="signup-btn" disabled>Sign up</button>
           <span><a href="login.php">or Log in</a></span>
         </form>
       </section>

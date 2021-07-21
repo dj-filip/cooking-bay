@@ -27,6 +27,7 @@ nav.left {
   box-sizing: border-box;
 }
     a {
+      font-family: 'Roboto';
       text-decoration: none;
     }
     a.logo {
@@ -50,7 +51,6 @@ nav.left {
       a {
         display: flex;
         align-items: center;
-        font-family: 'Roboto';
         font-size: 18px;
         font-weight: 300;
         color: #978562;
@@ -72,6 +72,10 @@ nav.left {
 
       a:hover, .current {
         color: #EBBE54;
+      }
+
+      .current {
+        font-weight: 400;
       }
 
       h4 {
@@ -97,7 +101,6 @@ nav.left {
       padding: 80px 20px 0 20px;
       a {
         display: flex;
-        font-family: 'Roboto';
         font-size: 18px;
         font-weight: 300;
         font-style: italic;
@@ -165,7 +168,6 @@ div.main-wrap {
         a#login {
           margin: 5.5px 40px 5.5px 0;
           padding: 0;
-          font-family: 'Roboto';
           font-size: 16px;
           font-weight: 700;
           font-style: italic;
@@ -213,10 +215,6 @@ div.main-wrap {
             nav.account-drop ul {
               margin: 10px 0;
             }
-
-                // nav.account-drop li {
-
-                // }
 
                     nav.account-drop li a {
                       display: flex;

@@ -27,7 +27,7 @@
         <h4>TOPICS</h4>
         <?php foreach ($topics as $key => $topic): ?>
           <li>
-            <a href="#">#<?php echo $topic['name']; ?></a>
+            <a href="<?= BASE_URL . '/' . strtolower($topic['name']) . '.php' ?>">#<?= $topic['name']; ?></a>
           </li>
         <?php endforeach; ?>
       </ul>

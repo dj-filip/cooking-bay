@@ -26,7 +26,7 @@
           <form action="login.php" method="post">
             <input type="text" name="username" value="<?php echo $username ?>" placeholder="Email or username..." onfocus="this.placeholder=''" onblur="this.placeholder='Email or username...'">
             <input type="password" name="password" placeholder="Password..." onfocus="this.placeholder=''" onblur="this.placeholder='Password...'">
-            <button class="sub" type="submit" name="submit" disabled>Log in</button>
+            <button id="sbmt" class="sub" type="submit" name="submit" disabled>Log in</button>
             <span><a href="signup.php">or Sign up</a></span>
           </form>
         </section>

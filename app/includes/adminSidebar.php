@@ -3,7 +3,7 @@
   <body>
     <nav class="left">
       <a class="logo" href="<?php echo BASE_URL . '/explore.php' ?>"><h1><span class="italhead">Cooking</span> BAY</h1></a>
-      <ul>
+      <ul class="admin-list">
         <li>
           <a href="<?php echo BASE_URL . '/admin/posts/index.php' ?>">Posts</a>
         </li>
@@ -12,6 +12,9 @@
         </li>
         <li>
           <a href="<?php echo BASE_URL . '/admin/topics/index.php' ?>">Topics</a>
+        </li>
+        <li>
+          <a href="<?php echo BASE_URL . '/admin/widgets/index.php' ?>">Widgets</a>
         </li>
       </ul>
     </nav>

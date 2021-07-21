@@ -182,7 +182,8 @@ function gridMaker() {
 // STYLE NAV MENU BASED ON PAGE
 let currentUrl = document.location;
 
-let navItems = document.querySelectorAll('.nav-list a');
+let ul = document.querySelector('ul');
+let navItems = ul.querySelectorAll('a');
 navItems.forEach(function(navItem) {
   if(navItem.href == currentUrl) {
     navItem.classList += ' current';

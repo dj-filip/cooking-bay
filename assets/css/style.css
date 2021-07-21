@@ -375,6 +375,10 @@ button.sub:disabled {
   cursor: default;
 }
 
+ul.admin-list {
+  margin: 40px auto;
+}
+
 main.admin {
   height: calc(100vh - 49px);
   width: 80%;
@@ -483,7 +487,7 @@ main.admin table .publish:hover {
 }
 
 main.admin th, main.admin td {
-  padding: 15px;
+  padding: 30px;
   border-bottom: 1px solid #e2e2e2;
   text-align: left;
   font-family: 'Roboto';
@@ -731,6 +735,7 @@ nav.left {
 }
 
 a {
+  font-family: 'Roboto';
   text-decoration: none;
 }
 
@@ -761,7 +766,6 @@ ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Roboto';
   font-size: 18px;
   font-weight: 300;
   color: #978562;
@@ -785,6 +789,10 @@ ul a.bold {
 
 ul a:hover, ul .current {
   color: #EBBE54;
+}
+
+ul .current {
+  font-weight: 400;
 }
 
 ul h4 {
@@ -818,7 +826,6 @@ ul.topics-list a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Roboto';
   font-size: 18px;
   font-weight: 300;
   font-style: italic;
@@ -897,7 +904,6 @@ div.wlcm {
 a#login {
   margin: 5.5px 40px 5.5px 0;
   padding: 0;
-  font-family: 'Roboto';
   font-size: 16px;
   font-weight: 700;
   font-style: italic;
