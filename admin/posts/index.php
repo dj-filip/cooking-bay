@@ -1,5 +1,10 @@
-<?php include_once ('../../path.php'); ?>
-<?php include_once (ROOT_PATH . '/app/controllers/posts.php'); ?>
+<?php 
+
+include_once ('../../path.php'); 
+include_once (ROOT_PATH . '/app/controllers/posts.php'); 
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

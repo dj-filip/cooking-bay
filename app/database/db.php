@@ -136,25 +136,12 @@ function delete($table, $id)
   // dd($id);
 }
 
+function getPublishedPosts() {
+  global $conn;
 
-// $data = [
-//   'username' => 'Marconi',
-//   'admin' => 0,
-//   'email' => 'marconi@marconi.com',
-//   'password' => 'dsa'
-// ];
+  $sql = "SELECT p.*, u.username, t.name AS topicname FROM posts AS p JOIN users AS u ON p.user_id = u.id JOIN topics AS t ON p.topic_id = t.id WHERE p.published = ?";
 
-// MY TESTS
-// $condValues = array_values($conditions);
-// $condTypes = str_repeat('g', count($conditions));
-//
-// function valtype($a, $b)
-// {
-//   $prnt = "This is Value - " . $a . " This is Type - " . $b;
-//   return $prnt;
-// }
-//
-// $valtypeprnt = valtype($condTypes, ...$condValues);
-
-// $users = delete('users', 3);
-// dd($users);
+  $stmt = executeQuery($sql, ['published' => 1]);
+  $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC); 
+  return $records;
+}

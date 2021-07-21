@@ -3,8 +3,8 @@
 include_once('path.php'); 
 include_once(ROOT_PATH . '/app/controllers/posts.php'); 
 
-$posts = selectAll('posts', ['published' => 1]);
-// dd($topics);
+$posts = getPublishedPosts();
+// dd($posts);
 // exit();
 ?>
 
@@ -33,11 +33,7 @@ $posts = selectAll('posts', ['published' => 1]);
             <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
               <div class="marker">
                 <p><?= $post['title'] ?></p>
-                <?php foreach ($topics as $topic): ?>
-                <?php if ($post['topic_id'] == $topic['id']) { ?>
-                <span>#<?= $topic['name'] ?></span>
-                <?php } ?>
-                <?php endforeach; ?>
+                <span>#<?= $post['topicname'] ?></span>
               </div>
             </div>
           <?php endforeach; ?>
