@@ -7,6 +7,7 @@ $table = 'posts';
 
 $posts = selectAll($table);
 $topics = selectAll('topics');
+$users = selectAll('users');
 
 $errors = array();
 $id = '';

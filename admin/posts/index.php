@@ -38,7 +38,11 @@
               <tr>
                 <td><?php echo $key +1; ?></td>
                 <td><?php echo $post['title']; ?></td>
-                <td>Cofi</td>
+                <?php foreach ($users as $key => $user) {
+                  if($post['user_id'] == $user['id']) {
+                    echo "<td>" . $user['username'] . "</td>";
+                  }
+                } ?>
                 <td class="tcenter"><a href="edit.php?id=<?=$post['id']; ?>" class="edit"><ion-icon name="create-outline" ></ion-icon></a></td>
                 <td class="tcenter"><a href="edit.php?delete_id=<?=$post['id']; ?>" class="delete"><ion-icon name="trash-outline" ></ion-icon></a></td>
                 <?php if ($post['published']): ?>
