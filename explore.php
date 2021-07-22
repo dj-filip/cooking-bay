@@ -2,7 +2,7 @@
 
 include_once('path.php'); 
 include_once(ROOT_PATH . '/app/controllers/posts.php'); 
-include_once(ROOT_PATH . '/app/helpers/limitDescriptionLength.php');
+include_once(ROOT_PATH . '/app/helpers/postInfo.php');
 
 $posts = getPublishedPosts();
 // dd($posts);
@@ -41,7 +41,7 @@ $posts = getPublishedPosts();
                   <p class="description"><?= limitDescriptionLength($post['body']); ?></p>
                   <div class="info-wrap">
                     <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
-                    <p class="info">5 min read</p>
+                    <p class="info"><?= readTime($post['body']); ?></p>
                   </div>
                 <?php endif; ?>
               </div>

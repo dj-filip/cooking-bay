@@ -1,5 +1,23 @@
 <?php 
 
+
+function readTime($postDescription) {
+    
+    $decoded = strip_tags(html_entity_decode($postDescription)); 
+    $wordNum = str_word_count($decoded);
+
+    $time = $wordNum / 200;
+    $readingTime = '';
+    if ($time < 1) {
+        $readingTime = 'short read';
+    } else {
+        $readingTime = floor($time) . ' min read';
+    }
+
+    return $readingTime;
+}
+
+
 function limitDescriptionLength($postDescription) {
     
     $description = str_replace('&nbsp;', ' ', html_entity_decode($postDescription)); 
