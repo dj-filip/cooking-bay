@@ -5,7 +5,7 @@ include_once(ROOT_PATH . '/app/controllers/posts.php');
 include_once(ROOT_PATH . '/app/helpers/postInfo.php');
 
 $posts = getPublishedPosts();
-// dd($posts);
+// dd(limitDescriptionLength($posts[1]['body']));
 // exit();
 ?>
 

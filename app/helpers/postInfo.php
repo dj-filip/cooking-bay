@@ -24,16 +24,16 @@ function limitDescriptionLength($postDescription) {
 
     $limited = array();
 
-    $wordNum = 25;
+    $wordNum = 50;
 
     $limited = array_values(explode(' ', $description, $wordNum));
 
-    if(count($limited) == 5) {
-        $limited[4] = '...' . $wordNum;
+    if(count($limited) == 50) {
+        array_pop($limited);
     }
 
     $descriptionLmtd = implode(' ', $limited);
-    return strip_tags($descriptionLmtd);
+    return trim(strip_tags($descriptionLmtd)) . '...READ MORE';
 }
 
 function test($postDesc) {
