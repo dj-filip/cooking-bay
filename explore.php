@@ -2,6 +2,7 @@
 
 include_once('path.php'); 
 include_once(ROOT_PATH . '/app/controllers/posts.php'); 
+include_once(ROOT_PATH . '/app/helpers/limitDescriptionLength.php');
 
 $posts = getPublishedPosts();
 // dd($posts);
@@ -31,11 +32,24 @@ $posts = getPublishedPosts();
           <?php foreach ($posts as $post): ?>
             <div class="all <?= $post['size'] ?>">
             <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
-              <div class="marker">
-                <p><?= $post['title'] ?></p>
-                <span>#<?= $post['topicname'] ?></span>
+              <div class="highlight">
+                <div class="icons">
+                  <ion-icon name="share-social-outline"></ion-icon>
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+                <?php if(strtolower($post['topicname']) != strtolower('videos')): ?>
+                  <p class="description"><?= limitDescriptionLength($post['body']); ?></p>
+                  <div class="info-wrap">
+                    <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
+                    <p class="info">5 min read</p>
+                  </div>
+                <?php endif; ?>
               </div>
+            <div class="marker">
+              <p><?= $post['title'] ?></p>
+              <span>#<?= $post['topicname'] ?></span>
             </div>
+          </div>
           <?php endforeach; ?>
 
           <div class="all menu S">

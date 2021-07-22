@@ -31,6 +31,7 @@ main.app {
 }
 
 div.all {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,6 +59,8 @@ div.all:hover {
           transform: scale(1.02);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 div.all img {
@@ -134,6 +137,7 @@ div.highlight {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
+  overflow: hidden;
 }
 
 div.icons {
@@ -166,6 +170,7 @@ p.description {
   font-weight: 400;
   color: #F6F6F6;
   line-height: 1.4;
+  opacity: 0;
 }
 
 div.info-wrap {
@@ -187,10 +192,18 @@ p.info {
   font-style: italic;
 }
 
-div.market:hover div.highlight {
+div.all:hover div.highlight {
   opacity: 1;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
+}
+
+div.all:hover div.highlight p, div.all:hover div.highlight div {
+  opacity: 1;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 div.marker {

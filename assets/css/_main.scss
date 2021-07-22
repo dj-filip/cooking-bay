@@ -23,6 +23,7 @@ main.app {
 }
 
     div.all {
+      position: relative;
       display: flex;
       flex-direction:column;
       justify-content: center;
@@ -35,6 +36,7 @@ main.app {
       &:hover {
         transform: scale(1.02);
         transition: 0.3s ease-in-out;
+        backface-visibility: hidden;
       }
       img {
         border-radius: 10px 10px 0 0;
@@ -103,6 +105,7 @@ main.app {
               transition: ease 0.5s;
               box-sizing: border-box;
               cursor: pointer;
+              overflow: hidden;
             }
 
                 div.icons {
@@ -131,6 +134,7 @@ main.app {
                       font-weight: 400;
                       color: #F6F6F6;
                       line-height: 1.4;
+                      opacity: 0;
                     }
 
                 div.info-wrap {
@@ -148,9 +152,14 @@ main.app {
                           font-style: italic;
                         }
 
-            div.market:hover div.highlight {
+            div.all:hover div.highlight {
               opacity: 1;
               transition: ease 0.5s;
+              p, div {
+                opacity: 1;
+                transition-duration: 0.3s;
+                transition-timing-function: ease;
+              }
             }
 
 
