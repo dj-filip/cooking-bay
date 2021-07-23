@@ -1,8 +1,8 @@
 <?php if (isset($_SESSION['message'])): ?>
-  <div class="wlcm <?=$_SESSION['type'] ?>">
-    <?php echo $_SESSION['message']; ?>
-  </div>
+    <div class="wlcm <?= $_SESSION['type']; ?>">
+        <?= $_SESSION['message']; ?>
+    </div>
 <?php
-  unset($_SESSION['message']);
+    unset($_SESSION['message']);
+    endif; 
 ?>
-<?php endif; ?>

@@ -3,255 +3,255 @@
 @import '_admin';
 
 html {
-  overflow: auto;
+    overflow: auto;
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  background-color: $mainBrown;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    background-color: $mainBrown;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 nav.left {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  justify-content:  flex-start;
-  width: 250px;
-  height: 100vh;
-  background-color: #222;
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content:    flex-start;
+    width: 250px;
+    height: 100vh;
+    background-color: #222;
+    box-sizing: border-box;
 }
-    a {
-      font-family: 'Roboto';
-      text-decoration: none;
-    }
-    a.logo {
-      display: block;
-      margin: 0 auto;
-      font-family: 'Roboto';
-      font-weight: 700;
-      color: #EBBE54;
-      font-size: 26px;
-      padding-top: 40px;
-    }
-
-        .italhead {
-          font-style: italic;
-          font-weight: 300;
-          color: #F6F6F6;
+        a {
+            font-family: 'Roboto';
+            text-decoration: none;
+        }
+        a.logo {
+            display: block;
+            margin: 0 auto;
+            font-family: 'Roboto';
+            font-weight: 700;
+            color: #EBBE54;
+            font-size: 26px;
+            padding-top: 40px;
         }
 
-    ul {
-      list-style: none;
-      a {
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        font-weight: 300;
-        color: #978562;
-        padding: 20px 0;
-        ion-icon {
-          margin-right: 40px;
-          font-size: 24px;
+                .italhead {
+                    font-style: italic;
+                    font-weight: 300;
+                    color: #F6F6F6;
+                }
+
+        ul {
+            list-style: none;
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 300;
+                color: #978562;
+                padding: 20px 0;
+                ion-icon {
+                    margin-right: 40px;
+                    font-size: 24px;
+                }
+            }
+            & li:first-child a ion-icon {
+                margin-right: 36px;
+                margin-left: -4px;
+                font-size: 32px;
+            }
+
+            a.bold {
+                font-weight: 700;
+            }
+
+            a:hover, .current {
+                color: #EBBE54;
+            }
+
+            .current {
+                font-weight: 400;
+            }
+
+            h4 {
+                margin-bottom: 20px;
+                font-family: 'Roboto';
+                font-size: 18px;
+                font-weight: 500;
+                color: #8c5d07;
+            }
         }
-      }
-      & li:first-child a ion-icon {
-        margin-right: 36px;
-        margin-left: -4px;
-        font-size: 32px;
-      }
 
-      a.bold {
-        font-weight: 700;
-      }
+        ul.nav-list {
+            margin-top: 40px;
+            padding-left: 20px;
+        }
 
-      a:hover, .current {
-        color: #EBBE54;
-      }
+        ul.topics-list {
+            display: flex;
+            justify-content:start;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0 auto;
+            padding: 80px 20px 0 20px;
+            a {
+                display: flex;
+                font-size: 18px;
+                font-weight: 300;
+                font-style: italic;
+                text-transform: lowercase;
+                color: #978562;
+                padding: 10px 10px;
+            }
 
-      .current {
-        font-weight: 400;
-      }
+            a.bold {
+                font-weight: 700;
+            }
 
-      h4 {
-        margin-bottom: 20px;
-        font-family: 'Roboto';
-        font-size: 18px;
-        font-weight: 500;
-        color: #8c5d07;
-      }
-    }
+            a:hover {
+                color: #EBBE54;
+            }
 
-    ul.nav-list {
-      margin-top: 40px;
-      padding-left: 20px;
-    }
-
-    ul.topics-list {
-      display: flex;
-      justify-content:start;
-      flex-wrap: wrap;
-      list-style: none;
-      margin: 0 auto;
-      padding: 80px 20px 0 20px;
-      a {
-        display: flex;
-        font-size: 18px;
-        font-weight: 300;
-        font-style: italic;
-        text-transform: lowercase;
-        color: #978562;
-        padding: 10px 10px;
-      }
-
-      a.bold {
-        font-weight: 700;
-      }
-
-      a:hover {
-        color: #EBBE54;
-      }
-
-      h4 {
-        flex-basis: 100%;
-        margin-bottom: 10px;
-        font-family: 'Roboto';
-        font-size: 18px;
-        font-weight: 500;
-        color: #8c5d07;
-      }
-    }
+            h4 {
+                flex-basis: 100%;
+                margin-bottom: 10px;
+                font-family: 'Roboto';
+                font-size: 18px;
+                font-weight: 500;
+                color: #8c5d07;
+            }
+        }
 
 
 
 div.main-wrap {
-  height: 100vh;
-  flex-basis: 100%;
-  box-sizing: border-box;
+    height: 100vh;
+    flex-basis: 100%;
+    box-sizing: border-box;
 }
 
-    nav.top {
-      display: flex;
-      justify-content: flex-end;
-      flex-shrink: 0;
-      padding: 10px 0;
-      box-sizing: border-box;
-      box-shadow: 0 2px 5px 0px rgba(0,0,0,0.25);
-    }
-
-        div.wlcm {
-          padding: 5px;
-          border-radius: 5px;
-          display: flex;
-          align-items: center;
-          font-family: 'Roboto';
-          font-size: 20px;
-          font-weight: 300;
-          font-style: italic;
+        nav.top {
+            display: flex;
+            justify-content: flex-end;
+            flex-shrink: 0;
+            padding: 10px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 5px 0px rgba(0,0,0,0.25);
         }
 
-        .neutral {
-          background-color: #d4c7be;
-          color: $whity;
-        }
+                div.wlcm {
+                    padding: 5px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Roboto';
+                    font-size: 20px;
+                    font-weight: 300;
+                    font-style: italic;
+                }
 
-        .success {
-          background-color: #85c855;
-          color: $whity;
-        }
+                .neutral {
+                    background-color: #d4c7be;
+                    color: $whity;
+                }
 
-        a#login {
-          margin: 5.5px 40px 5.5px 0;
-          padding: 0;
-          font-size: 16px;
-          font-weight: 700;
-          font-style: italic;
-          color: $mainYellow;
-          &:hover {
-            color: #fde986;
-          }
-        }
+                .success {
+                    background-color: #85c855;
+                    color: $whity;
+                }
 
-        div.account {
-          display: flex;
-          align-items: center;
-          margin-right: 40px;
-        }
-
-            button {
-              color: $whity;
-              background: none;
-              outline: none;
-              border: none;
-              cursor: pointer;
-              ion-icon {
-                color: #EBBE54;
-              }
-              &:hover ion-icon {
-                color: #e29f00;
-              }
-            }
-
-
-        div.account-drop-wrap {
-          position: absolute;
-          margin: 39px 30px 0 0;
-        }
-
-        nav.account-drop {
-          background-color: #fff;
-          border-radius: 10px;
-          position: relative;
-          padding: 5px;
-          z-index: 1000;
-          display: none;
-        }
-
-            nav.account-drop ul {
-              margin: 10px 0;
-            }
-
-                    nav.account-drop li a {
-                      display: flex;
-                      font-size: 14px;
-                      padding: 5px 10px 5px 20px;
+                a#login {
+                    margin: 5.5px 40px 5.5px 0;
+                    padding: 0;
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-style: italic;
+                    color: $mainYellow;
+                    &:hover {
+                        color: #fde986;
                     }
+                }
 
-        nav.account-drop::before {
-          content: "";
-          position: absolute;
-          top: -20px;
-          right: 35px;
-          border: 10px solid;
-          border-color: transparent transparent rgb(255, 255, 255) transparent;
-          transform: translateX(-50%);
-        }
+                div.account {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 40px;
+                }
 
-        .active-accdrop {
-          display: block !important;
-        }
+                        button {
+                            color: $whity;
+                            background: none;
+                            outline: none;
+                            border: none;
+                            cursor: pointer;
+                            ion-icon {
+                                color: #EBBE54;
+                            }
+                            &:hover ion-icon {
+                                color: #e29f00;
+                            }
+                        }
+
+
+                div.account-drop-wrap {
+                    position: absolute;
+                    margin: 39px 30px 0 0;
+                }
+
+                nav.account-drop {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    position: relative;
+                    padding: 5px;
+                    z-index: 1000;
+                    display: none;
+                }
+
+                        nav.account-drop ul {
+                            margin: 10px 0;
+                        }
+
+                                        nav.account-drop li a {
+                                            display: flex;
+                                            font-size: 14px;
+                                            padding: 5px 10px 5px 20px;
+                                        }
+
+                nav.account-drop::before {
+                    content: "";
+                    position: absolute;
+                    top: -20px;
+                    right: 35px;
+                    border: 10px solid;
+                    border-color: transparent transparent rgb(255, 255, 255) transparent;
+                    transform: translateX(-50%);
+                }
+
+                .active-accdrop {
+                    display: block !important;
+                }
 
 
 
 nav.right {
-  flex-shrink: 1;
-  width: 470px;
-  height: 100vh;
-  margin-left: auto;
+    flex-shrink: 1;
+    width: 470px;
+    height: 100vh;
+    margin-left: auto;
 }
 
 div.app-wrap::-webkit-scrollbar {
-  width: 20px;
+    width: 20px;
 }
 
 div.app-wrap::-webkit-scrollbar-thumb {
-  background-color: #46362A;
-  border-radius: 10px;
-  border: 6px solid transparent;
-  background-clip: content-box ;
+    background-color: #46362A;
+    border-radius: 10px;
+    border: 6px solid transparent;
+    background-clip: content-box ;
 }

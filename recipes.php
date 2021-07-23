@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Recipes</title>
 
@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  </head>
+</head>
 
 <?php include_once (ROOT_PATH . '/app/includes/header.php'); ?>
-
 
 <?php include_once (ROOT_PATH . '/app/includes/footer.php'); ?>
