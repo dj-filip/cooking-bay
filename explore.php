@@ -28,37 +28,39 @@ $posts = getPublishedPosts();
             <main class="app">
 
                 <?php foreach ($posts as $post): ?>
-                        <div class="all <?= $post['size'] ?>">
-                            <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
-                            <div class="highlight">
-                                <div class="icons">
-                                    <ion-icon name="share-social-outline"></ion-icon>
-                                    <ion-icon name="bookmark-outline"></ion-icon>
-                                </div>
-                                <?php if(strtolower($post['topicname']) != strtolower('videos')): ?>
-                                <p class="description"><?= limitDescriptionLength($post['body']); ?></p>
-                                <div class="info-wrap">
-                                    <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
-                                    <p class="info"><?= readTime($post['body']); ?></p>
-                                </div>
-                                <?php endif; ?>
+                    <a href="single.php?id=<?= $post['id']; ?>" class="all <?= $post['size']; ?>">
+                        <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
+                        <div class="highlight">
+                            <div class="icons">
+                                <ion-icon name="share-social-outline"></ion-icon>
+                                <ion-icon name="bookmark-outline"></ion-icon>
                             </div>
-                            <div class="marker">
-                                <p><?= $post['title'] ?></p>
-                                <span>#<?= $post['topicname'] ?></span>
-                            </div>
+                            <?php if(strtolower($post['topicname']) != strtolower('videos')): ?>
+                                <div class="description-wrap">
+                                    <p class="description"><?= limitDescriptionLength($post['body']); ?></p>
+                                    <div class="info-wrap">
+                                        <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
+                                        <p class="info"><?= readTime($post['body']); ?></p>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
+                        <div class="marker">
+                            <p><?= $post['title'] ?></p>
+                            <span>#<?= $post['topicname'] ?></span>
+                        </div>
+                    </a>
                 <?php endforeach; ?>
 
-                <div class="all menu S">
+                <a class="all menu S">
                 <h3>MY MENU</h3>
-                </div>
-                <div class="all menu S">
+                </a>
+                <a class="all menu S">
                 <h3>MY MENU</h3>
-                </div>
-                <div class="all menu S">
+                </a>
+                <a class="all menu S">
                 <h3>MY MENU</h3>
-                </div>
+                </a>
 
                 <!-- 
                 <div class="all burgers m">

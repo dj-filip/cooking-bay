@@ -22,7 +22,7 @@ main.app {
     box-sizing: border-box;
 }
 
-    div.all {
+    a.all {
         position: relative;
         display: flex;
         flex-direction:column;
@@ -72,7 +72,7 @@ main.app {
                         color: #EBBE54;
                     }
 
-            div.menu {
+            a.menu {
                 justify-content: center;
                 align-items: center;
                 background-color: #EBBE54;
@@ -140,7 +140,7 @@ main.app {
                             div.info-wrap {
                                 display: flex;
                                 justify-content: space-between;
-                                margin-top: 10px;
+                                margin-top: 20px;
                             }
 
                                     p.info {
@@ -152,7 +152,7 @@ main.app {
                                                 font-style: italic;
                                             }
 
-                    div.all:hover div.highlight {
+                    a.all:hover div.highlight {
                         opacity: 1;
                         transition: ease 0.5s;
                         p, div {

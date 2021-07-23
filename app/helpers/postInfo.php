@@ -36,12 +36,11 @@ function limitDescriptionLength($postDescription) {
     return trim(strip_tags($descriptionLmtd)) . '...READ MORE';
 }
 
-function test($postDesc) {
-    $desc = htmlentities($postDesc);
-    // $desc = html_entity_decode($postDesc, ENT_COMPAT, 'UTF-8');
-    $descDecode = strip_tags(html_entity_decode($desc));
+function decode($postDescription) {
 
-    return $descDecode;
+    $descDecoded = strip_tags(str_replace('&nbsp;', ' ', html_entity_decode($postDescription)));
+
+    return $descDecoded;
 }
 
 
