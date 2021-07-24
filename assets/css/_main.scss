@@ -5,7 +5,8 @@ div.middle-wrap {
 
 div.app-wrap {
     width: 100%;
-    height: calc(100vh - 49px);
+    height: 100vh;
+    box-sizing: border-box;
     overflow-y: scroll;
 }
 
@@ -18,7 +19,7 @@ main.app {
     grid-row-gap: 40px;
     grid-auto-flow: dense;
     flex-grow: 1;
-    padding: 10px;
+    padding: 20px 0 80px 20px;
     box-sizing: border-box;
 }
 
@@ -154,11 +155,9 @@ main.app {
 
                     a.all:hover div.highlight {
                         opacity: 1;
-                        transition: ease 0.5s;
+                        transition: 0.3s;
                         p, div {
                             opacity: 1;
-                            transition-duration: 0.3s;
-                            transition-timing-function: ease;
                         }
                     }
 

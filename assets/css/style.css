@@ -335,7 +335,9 @@ div.middle-wrap {
 
 div.app-wrap {
   width: 100%;
-  height: calc(100vh - 49px);
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow-y: scroll;
 }
 
@@ -352,7 +354,7 @@ main.app {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 10px;
+  padding: 20px 0 80px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -521,16 +523,12 @@ p.info {
 
 a.all:hover div.highlight {
   opacity: 1;
-  -webkit-transition: ease 0.5s;
-  transition: ease 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 a.all:hover div.highlight p, a.all:hover div.highlight div {
   opacity: 1;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
 }
 
 div.marker {
@@ -717,7 +715,11 @@ button.sub:disabled {
 
 main.article-main {
   width: 100%;
-  padding: 100px 0px 0 65px;
+  height: 100vh;
+  padding: 65px 0 100px 65px;
+  overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main.article-main article {
@@ -913,7 +915,7 @@ nav.top {
           justify-content: flex-end;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 10px 0;
+  padding: 15px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.25);
@@ -1028,16 +1030,16 @@ nav.account-drop::before {
 nav.right {
   -ms-flex-negative: 1;
       flex-shrink: 1;
-  width: 470px;
+  width: 25%;
   height: 100vh;
   margin-left: auto;
 }
 
-div.app-wrap::-webkit-scrollbar {
+div.app-wrap::-webkit-scrollbar, main.article-main::-webkit-scrollbar {
   width: 20px;
 }
 
-div.app-wrap::-webkit-scrollbar-thumb {
+div.app-wrap::-webkit-scrollbar-thumb, main.article-main::-webkit-scrollbar-thumb {
   background-color: #46362A;
   border-radius: 10px;
   border: 6px solid transparent;

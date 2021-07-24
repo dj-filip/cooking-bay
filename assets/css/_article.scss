@@ -1,6 +1,9 @@
 main.article-main {
     width: 100%;
-    padding: 100px 0px 0 65px;
+    height: 100vh;
+    padding: 65px 0 100px 65px;
+    overflow-y: scroll;
+    box-sizing: border-box;
     article {
         display: flex;
     }

@@ -140,7 +140,7 @@ div.main-wrap {
             display: flex;
             justify-content: flex-end;
             flex-shrink: 0;
-            padding: 10px 0;
+            padding: 15px 0;
             box-sizing: border-box;
             box-shadow: 0 2px 5px 0px rgba(0,0,0,0.25);
         }
@@ -241,16 +241,16 @@ div.main-wrap {
 
 nav.right {
     flex-shrink: 1;
-    width: 470px;
+    width: 25%;
     height: 100vh;
     margin-left: auto;
 }
 
-div.app-wrap::-webkit-scrollbar {
+div.app-wrap::-webkit-scrollbar, main.article-main::-webkit-scrollbar {
     width: 20px;
 }
 
-div.app-wrap::-webkit-scrollbar-thumb {
+div.app-wrap::-webkit-scrollbar-thumb, main.article-main::-webkit-scrollbar-thumb {
     background-color: #46362A;
     border-radius: 10px;
     border: 6px solid transparent;
