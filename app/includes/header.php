@@ -29,6 +29,11 @@
             </li>
         <?php endforeach; ?>
     </ul>
+    <div class="settings-btn-wrap">
+        <button>
+            <ion-icon name="settings-outline"></ion-icon>
+        </button>
+    </div>
 </nav>
 
 <div class="main-wrap">
