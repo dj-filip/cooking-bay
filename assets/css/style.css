@@ -397,6 +397,36 @@ a.all img {
   width: 100%;
 }
 
+a.all div.play {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border: 3px solid #F6F6F6;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 999;
+}
+
+a.all div.play ion-icon {
+  font-size: 56px;
+  color: #F6F6F6;
+  margin-left: 5%;
+}
+
+a.all div.play:hover {
+  background-color: #EBBE54;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+a.all div.play:hover ion-icon {
+  color: #F6F6F6;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
 .S {
   grid-column: span 1;
 }
@@ -467,6 +497,10 @@ div.highlight {
           box-sizing: border-box;
   cursor: pointer;
   overflow: hidden;
+}
+
+div.highlight-active {
+  opacity: 1;
 }
 
 div.icons {
