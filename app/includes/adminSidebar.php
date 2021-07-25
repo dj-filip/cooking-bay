@@ -17,6 +17,11 @@
                 <a href="<?= BASE_URL . '/admin/widgets/index.php' ?>">Widgets</a>
             </li>
         </ul>
+        <div class="settings-btn-wrap">
+            <button>
+                <ion-icon name="settings-outline"></ion-icon>
+            </button>
+         </div>
     </nav>
     <div class="main-wrap">
         <nav class="top">
