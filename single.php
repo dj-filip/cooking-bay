@@ -31,16 +31,32 @@ if (isset($_GET['id'])) {
     <main class="article-main">
         <article>
             <section>
-                <h3><?= $post['title']; ?></h3>
-                <div class="info-wrap">
-                    <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
-                    <p class="info"><?= readTime($post['body']); ?></p>
+                <div>
+                    <h3><?= $post['title']; ?></h3>
+                    <p><span class="ital">by</span> Filip Djordjevic</p>
+                    <p><?= readTime($post['body']); ?></p>
                 </div>
-                <p><?= decode($post['body']); ?></p>
-                <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
+                <div>
+                    <div>
+                        <button><ion-icon name="heart-outline"></ion-icon></button>
+                        <button><ion-icon name="chatbubble-outline"></ion-icon></button>
+                    </div>
+                    <div>
+                        <button><ion-icon name="share-social-outline"></ion-icon></button>
+                        <button><ion-icon name="bookmark-outline"></ion-icon></button>
+                    </div>
+                </div>
+                <div>
+                    <p><?= html_entity_decode($post['body']); ?></p>
+                    <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
+                </div>
             </section>
             <section>
-
+                <div>
+                    <p>City: <span>MARRAKECH</span></p> 
+                    <p>Languages: <span>Arabic, French, English</span></p> 
+                    <p>Population:  <span>928,850</span></p> 
+                </div>
             </section>
         </article>
     </main>

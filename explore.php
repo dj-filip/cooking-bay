@@ -27,31 +27,33 @@ $posts = getPublishedPosts();
             <main class="app">
 
                 <?php foreach ($posts as $post): ?>
-                    <a href="single.php?id=<?= $post['id']; ?>" class="all <?= $post['size']; ?>">
-                        <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
-                        <?php if(strtolower($post['topicname']) != strtolower('videos')): ?>
-                            <div class="highlight">
-                                <div class="icons">
-                                    <ion-icon name="share-social-outline"></ion-icon>
-                                    <ion-icon name="bookmark-outline"></ion-icon>
-                                </div>
-                                    <div class="description-wrap">
-                                        <p class="description"><?= limitDescriptionLength($post['body']); ?></p>
-                                        <div class="info-wrap">
-                                            <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
-                                            <p class="info"><?= readTime($post['body']); ?></p>
-                                        </div>
+                    <?php if(strtolower($post['topicname']) != strtolower('videos')): ?>
+                        <a href="single.php?id=<?= $post['id']; ?>" class="all <?= $post['size']; ?>">
+                            <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
+                                <div class="highlight">
+                                    <div class="icons">
+                                        <ion-icon name="share-social-outline"></ion-icon>
+                                        <ion-icon name="bookmark-outline"></ion-icon>
                                     </div>
+                                        <div class="description-wrap">
+                                            <p class="description"><?= limitDescriptionLength($post['body']); ?></p>
+                                            <div class="info-wrap">
+                                                <p class="info"><span class="ital">by</span> Filip Djordjevic</p>
+                                                <p class="info"><?= readTime($post['body']); ?></p>
+                                            </div>
+                                        </div>
+                                </div>
+                            <?php else: ?>
+                                <a href="" class="all <?= $post['size']; ?>">
+                                    <img src="<?= BASE_URL . '/assets/images/' . $post['image']; ?>" alt="">
+                                        <div class="play"><ion-icon name="play"></ion-icon></div>
+                                        <div class="highlight highlight-active"></div>
+                            <?php endif; ?>
+                            <div class="marker">
+                                <p><?= $post['title'] ?></p>
+                                <span>#<?= $post['topicname'] ?></span>
                             </div>
-                        <?php else: ?>
-                            <div class="play"><ion-icon name="play"></ion-icon></div>
-                            <div class="highlight highlight-active"></div>
-                        <?php endif; ?>
-                        <div class="marker">
-                            <p><?= $post['title'] ?></p>
-                            <span>#<?= $post['topicname'] ?></span>
-                        </div>
-                    </a>
+                        </a>
                 <?php endforeach; ?>
 
                 <a class="all menu S">
