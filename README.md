@@ -1,2 +1,2 @@
-# cooking-bay
-Cooking Bay 
+# Cooking Bay
+Cooking Bay is app which connects people who love to combine cooking and traveling and together enjoy and share recipes, articles and multimedia content. Cooking Bay enables totaly new and fresh mix of traveling and cooking experience on the internet. Explore from first hand and share with others locations of top quality markets, spice shops and wide variety of grocceries in some of the world's top tourist destinations!
